@@ -22,3 +22,9 @@ class UserModelTestCase(unittest.TestCase):
         u2 = User(password='cat')
 
         self.assertTrue(u.password_hash != u2.password_hash)
+
+    def test_user_confirm(self):
+        u = User(id=123)
+        s = u.generate_confirmation_token()
+        self.assertTrue(u.confirm(s))
+        self.assertFalse(u.confirm('cat'))
