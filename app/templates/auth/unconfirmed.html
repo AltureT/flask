@@ -8,6 +8,6 @@
         Check your inbox,you should have received an email with a confirmed link</p>
     <p>
         Need another confirmation email?
-        <a href="{{ url_for(auth.confirm) }}">Click here</a>
+        <a href="{{ url_for('auth.resend_confirmation') }}">Click here</a>
     </p>
 {% endblock %}
