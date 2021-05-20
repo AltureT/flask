@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{#{% import 'bootstrap/wtf.html' as wtf %}#}
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}Flasky{% endblock %}
 
@@ -13,5 +13,11 @@
             {% endif %}!
         </h1>
     </div>
-    {#    {{ wtf.quick_form(form) }}#}
+    <div>
+        {% if current_user.can(Permission.WRITE) %}
+            {{ wtf.quick_form(form) }}
+        {% endif %}
+    </div>
+    {% include '_posts.html' %}
+
 {% endblock %}
