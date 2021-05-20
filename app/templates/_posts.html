@@ -1,3 +1,4 @@
+{% import "_macros.html" as macros %}
 <ul class="posts">
     {% for post in posts %}
         <li class="post">
@@ -18,3 +19,6 @@
         </li>
     {% endfor %}
 </ul>
+<div class="pagination">
+    {{ macros.pagination_widget(pagination,'.index') }}
+</div>
