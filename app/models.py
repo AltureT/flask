@@ -206,8 +206,7 @@ class User(UserMixin, db.Model):
             url = 'http://www.gravatar.com/avatar'
         hash = self.avatar_hash or self.gravatar_hash()
         return f'{url}/{hash}?s={size}&d={default}&r={rating}'.format(
-            url=url, hash=hash, size=size, default=default, rating=rating
-        )
+            url=url, hash=hash, size=size, default=default, rating=rating)
 
     def follow(self, user):
         if not self.is_following(user):
