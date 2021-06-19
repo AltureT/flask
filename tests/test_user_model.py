@@ -1,5 +1,6 @@
 import unittest
 import time
+from datetime import datetime
 from app import create_app, db
 from app.models import User, AnonymousUser, Role, Permission
 
@@ -137,3 +138,6 @@ class UserModelTestCase(unittest.TestCase):
         self.assertFalse(u.can(Permission.WRITE))
         self.assertFalse(u.can(Permission.MODERATE))
         self.assertFalse(u.can(Permission.ADMIN))
+
+    # def test_timestamps(self):
+    #     u=User(p)
