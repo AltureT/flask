@@ -23,9 +23,9 @@ def get_posts():
 
     return jsonify({
         'posts': [post.to_json() for post in posts],
-        'prev_url': prev,
-        'next_url': next,
-        'count': pagination.totla
+        'prev': prev,
+        'next': next,
+        'count': pagination.total
     })
 
 
