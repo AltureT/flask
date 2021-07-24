@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PY-211.7442.45">
+    <data-source name="data" uuid="abf0f42c-9055-461d-9ba2-b56cabf31950">
+      <database-info product="SQLite" version="3.34.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.34.0" dbms="SQLITE" exact-version="3.34.0" exact-driver-version="3.34">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="data-dev" uuid="31cb7999-cb22-44ba-87a8-7c4e3b03b068">
+      <database-info product="SQLite" version="3.34.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.34.0" dbms="SQLITE" exact-version="3.34.0" exact-driver-version="3.34">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="SQLite - identifier.sqlite" uuid="2c5d3ef6-61ae-4b37-886f-b60801ac9c10">
+      <database-info product="SQLite" version="3.34.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.34.0" dbms="SQLITE" exact-version="3.34.0" exact-driver-version="3.34">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
