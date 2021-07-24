@@ -1,9 +1,10 @@
-from flask import render_template, redirect, url_for, abort, current_app, flash, request, make_response
+from flask import render_template, redirect, url_for, abort, flash, request, \
+    current_app, make_response
 from flask_login import login_required, current_user
 from . import main
 from .forms import EditProfileForm, EditProfileAdminForm, PostForm, CommentForm
 from .. import db
-from ..models import User, Role, Permission, Post, Comment
+from ..models import Permission, Role, User, Post, Comment
 from ..decorators import admin_required, permission_required
 
 
@@ -90,7 +91,7 @@ def edit_profile_admin(id):
     return render_template('edit_profile.html', form=form, user=user)
 
 
-@main.route('/post/<int:id>', methods=['GEt', 'POST'])
+@main.route('/post/<int:id>', methods=['GET', 'POST'])
 def post(id):
     post = Post.query.get_or_404(id)
     form = CommentForm()
@@ -106,7 +107,6 @@ def post(id):
     if page == -1:
         page = (post.comments.count() - 1) // \
                current_app.config['FLASKY_COMMENTS_PER_PAGE'] + 1
-
     pagination = post.comments.order_by(Comment.timestamp.asc()).paginate(
         page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
         error_out=False)

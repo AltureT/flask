@@ -1,20 +1,21 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, BooleanField, SelectField
-from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError, Required
-from app.models import Role, User
+from wtforms import StringField, TextAreaField, BooleanField, SelectField, \
+    SubmitField
+from wtforms.validators import DataRequired, Length, Email, Regexp
+from wtforms import ValidationError
 from flask_pagedown.fields import PageDownField
+from app.models import Role, User
 
 
 class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
-
     submit = SubmitField('Submit')
 
 
 class EditProfileForm(FlaskForm):
     name = StringField('Real name', validators=[Length(0, 64)])
     location = StringField('Location', validators=[Length(0, 64)])
-    about_me = TextAreaField('About.me')
+    about_me = TextAreaField('About me')
     submit = SubmitField('Submit')
 
 
@@ -24,7 +25,7 @@ class EditProfileAdminForm(FlaskForm):
     username = StringField('Username', validators=[
         DataRequired(), Length(1, 64),
         Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
-               'Usernames must have only letters,numbers,dots or'
+               'Usernames must have only letters, numbers, dots or '
                'underscores')])
     confirmed = BooleanField('Confirmed')
     role = SelectField('Role', coerce=int)
@@ -40,7 +41,7 @@ class EditProfileAdminForm(FlaskForm):
         self.user = user
 
     def validate_email(self, field):
-        if field.data != self.email and \
+        if field.data != self.user.email and \
                 User.query.filter_by(email=field.data).first():
             raise ValidationError('Email already registered.')
 
@@ -51,10 +52,10 @@ class EditProfileAdminForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    body = PageDownField("What's on your mind?", validators=[Required()])
+    body = PageDownField("What's on your mind?", validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
 class CommentForm(FlaskForm):
-    body = StringField('', validators=[DataRequired()])
+    body = StringField('Enter your comment', validators=[DataRequired()])
     submit = SubmitField('Submit')

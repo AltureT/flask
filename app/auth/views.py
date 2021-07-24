@@ -103,7 +103,7 @@ def change_password():
             return redirect(url_for('main.index'))
         else:
             flash('Invalid password.')
-    return render_template('auth/change_password.html', form=form)
+    return render_template("auth/change_password.html", form=form)
 
 
 @auth.route('/reset', methods=['GET', 'POST'])
@@ -155,7 +155,7 @@ def change_email_request():
             return redirect(url_for('main.index'))
         else:
             flash('Invalid email or password.')
-    return render_template('auth/change_email.html', form=form)
+    return render_template("auth/change_email.html", form=form)
 
 
 @auth.route('/change_email/<token>')

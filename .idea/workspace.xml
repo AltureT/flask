@@ -4,12 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask json序列化与资源端点实现 配置">
+    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask HTTPie测试web服务 配置">
+      <change afterPath="$PROJECT_DIR$/app/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/app___init___py.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/app_exceptions_py.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/app_models_py.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/coverage_html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/favicon_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/jquery.ba-throttle-debounce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/jquery.hotkeys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/jquery.isonscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/jquery.tablesorter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/keybd_closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/keybd_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/status.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/coverage/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/posts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/_macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_macros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/email/confirm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/email/confirm.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/unconfirmed.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/unconfirmed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/mail/new_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/mail/new_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/mail/new_user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/mail/new_user.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/moderate.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/moderate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flasky.py" beforeDir="false" afterPath="$PROJECT_DIR$/flasky.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_user_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +64,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -291,7 +335,10 @@
       <workItem from="1625487828414" duration="174000" />
       <workItem from="1625548081529" duration="991000" />
       <workItem from="1625999178690" duration="7469000" />
-      <workItem from="1626344666383" duration="6673000" />
+      <workItem from="1626344666383" duration="8401000" />
+      <workItem from="1626440928613" duration="700000" />
+      <workItem from="1627089968213" duration="4045000" />
+      <workItem from="1627094741269" duration="2764000" />
     </task>
     <task id="LOCAL-00001" summary="flask moment 配置">
       <created>1615299753202</created>
@@ -468,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626347874555</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="flask HTTPie测试web服务 配置">
+      <created>1626353196720</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1626353196720</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,11 +565,12 @@
     <MESSAGE value="flask 用户评论禁用 配置" />
     <MESSAGE value="flask 接口api配置与环境更新 配置" />
     <MESSAGE value="flask json序列化与资源端点实现 配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="flask json序列化与资源端点实现 配置" />
+    <MESSAGE value="flask HTTPie测试web服务 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask HTTPie测试web服务 配置" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flasky$Flask__flasky_py_.coverage" NAME="Flask (flasky.py) Coverage Results" MODIFIED="1626351387378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flasky$Flask__flasky_py_.coverage" NAME="Flask (flasky.py) Coverage Results" MODIFIED="1627109304170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$Flask.coverage" NAME="Flask (hello.py) Coverage Results" MODIFIED="1617679307421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$hello.coverage" NAME="hello Coverage Results" MODIFIED="1617277526115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$views.coverage" NAME="views Coverage Results" MODIFIED="1624012087042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/main" />

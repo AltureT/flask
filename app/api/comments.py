@@ -10,8 +10,7 @@ def get_comments():
     page = request.args.get('page', 1, type=int)
     pagination = Comment.query.order_by(Comment.timestamp.desc()).paginate(
         page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
-        error_out=False
-    )
+        error_out=False)
     comments = pagination.items
     prev = None
     if pagination.has_prev:
@@ -20,7 +19,7 @@ def get_comments():
     if pagination.has_next:
         next = url_for('api.get_comments', page=page + 1)
     return jsonify({
-        'comemnts': [comment.to_json() for comment in comments],
+        'comments': [comment.to_json() for comment in comments],
         'prev': prev,
         'next': next,
         'count': pagination.total
@@ -39,8 +38,7 @@ def get_post_comments(id):
     page = request.args.get('page', 1, type=int)
     pagination = post.comments.order_by(Comment.timestamp.asc()).paginate(
         page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
-        error_out=False
-    )
+        error_out=False)
     comments = pagination.items
     prev = None
     if pagination.has_prev:

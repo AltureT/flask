@@ -5,6 +5,14 @@ from wtforms import ValidationError
 from ..models import User
 
 
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
+                                             Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember_me = BooleanField('Keep me logged in')
+    submit = SubmitField('Log In')
+
+
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64),
                                              Email()])
@@ -27,14 +35,6 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Username already in use.')
 
 
-class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
-                                             Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('keep me logged in')
-    submit = SubmitField('Log In')
-
-
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField('Old password', validators=[DataRequired()])
     password = PasswordField('New password', validators=[
@@ -45,21 +45,21 @@ class ChangePasswordForm(FlaskForm):
 
 
 class PasswordResetRequestForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(),
-                                             Length(1, 64), Email()])
+    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
+                                             Email()])
     submit = SubmitField('Reset Password')
 
 
 class PasswordResetForm(FlaskForm):
     password = PasswordField('New Password', validators=[
-        DataRequired(),
-        EqualTo('password2', message='password must match')])
+        DataRequired(), EqualTo('password2', message='Passwords must match')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField('Reset Password')
 
 
 class ChangeEmailForm(FlaskForm):
-    email = StringField('New Email', validators=[DataRequired(), Email(), Length(1, 64)])
+    email = StringField('New Email', validators=[DataRequired(), Length(1, 64),
+                                                 Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Update Email Address')
 
