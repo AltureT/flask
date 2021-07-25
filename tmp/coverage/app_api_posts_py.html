@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7"/>
-    <title>Coverage for app/api/posts.py: 33%</title>
+    <title>Coverage for app/api/posts.py: 88%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -18,20 +18,20 @@
 <div id="header">
     <div class="content">
         <h1>Coverage for <b>app/api/posts.py</b> :
-            <span class="pc_cov">33%</span>
+            <span class="pc_cov">88%</span>
         </h1>
         <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts"/>
         <h2 class="stats">
             40 statements &nbsp;
-            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">16 run</button>
-            <button type="button" class="mis show_mis shortkey_m button_toggle_mis" title="Toggle lines missing">24
+            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">37 run</button>
+            <button type="button" class="mis show_mis shortkey_m button_toggle_mis" title="Toggle lines missing">3
                 missing
             </button>
             <button type="button" class="exc show_exc shortkey_x button_toggle_exc" title="Toggle lines excluded">0
                 excluded
             </button>
             <button type="button" class="par run show_par shortkey_p button_toggle_par"
-                    title="Toggle lines partially run">0 partial
+                    title="Toggle lines partially run">3 partial
             </button>
         </h2>
     </div>
@@ -90,16 +90,16 @@
     <p id="t10" class="run"><span class="n"><a href="#t10">10</a></span><span class="t"><span
             class="key">def</span> <span class="nam">get_posts</span><span class="op">(</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t11" class="mis show_mis"><span class="n"><a href="#t11">11</a></span><span class="t">    <span class="nam">page</span> <span
-            class="op">=</span> <span class="nam">request</span><span class="op">.</span><span
-            class="nam">args</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span
-            class="str">'page'</span><span class="op">,</span> <span class="num">1</span><span class="op">,</span> <span
-            class="nam">type</span><span class="op">=</span><span class="nam">int</span><span class="op">)</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p id="t12" class="mis show_mis"><span class="n"><a href="#t12">12</a></span><span class="t">    <span class="nam">pagination</span> <span
-            class="op">=</span> <span class="nam">Post</span><span class="op">.</span><span
-            class="nam">query</span><span class="op">.</span><span class="nam">paginate</span><span class="op">(</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p id="t11" class="run"><span class="n"><a href="#t11">11</a></span><span class="t">    <span
+            class="nam">page</span> <span class="op">=</span> <span class="nam">request</span><span
+            class="op">.</span><span class="nam">args</span><span class="op">.</span><span class="nam">get</span><span
+            class="op">(</span><span class="str">'page'</span><span class="op">,</span> <span class="num">1</span><span
+            class="op">,</span> <span class="nam">type</span><span class="op">=</span><span class="nam">int</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t12" class="run"><span class="n"><a href="#t12">12</a></span><span class="t">    <span
+            class="nam">pagination</span> <span class="op">=</span> <span class="nam">Post</span><span
+            class="op">.</span><span class="nam">query</span><span class="op">.</span><span
+            class="nam">paginate</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p id="t13" class="pln"><span class="n"><a href="#t13">13</a></span><span class="t">        <span
             class="nam">page</span><span class="op">,</span> <span class="nam">per_page</span><span
             class="op">=</span><span class="nam">current_app</span><span class="op">.</span><span
@@ -108,25 +108,31 @@
     <p id="t14" class="pln"><span class="n"><a href="#t14">14</a></span><span class="t">        <span class="nam">error_out</span><span
             class="op">=</span><span class="key">False</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p id="t15" class="mis show_mis"><span class="n"><a href="#t15">15</a></span><span class="t">    <span class="nam">posts</span> <span
-            class="op">=</span> <span class="nam">pagination</span><span class="op">.</span><span
-            class="nam">items</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t16" class="mis show_mis"><span class="n"><a href="#t16">16</a></span><span class="t">    <span class="nam">prev</span> <span
-            class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t17" class="mis show_mis"><span class="n"><a href="#t17">17</a></span><span class="t">    <span class="key">if</span> <span
-            class="nam">pagination</span><span class="op">.</span><span class="nam">has_prev</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t15" class="run"><span class="n"><a href="#t15">15</a></span><span class="t">    <span
+            class="nam">posts</span> <span class="op">=</span> <span class="nam">pagination</span><span
+            class="op">.</span><span class="nam">items</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t16" class="run"><span class="n"><a href="#t16">16</a></span><span class="t">    <span
+            class="nam">prev</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t17" class="par run show_par"><span class="n"><a href="#t17">17</a></span><span class="t">    <span
+            class="key">if</span> <span class="nam">pagination</span><span class="op">.</span><span
+            class="nam">has_prev</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">17&#x202F;&#x219B;&#x202F;18</span><span class="annotate long">line 17 didn't jump to line 18, because the condition on line 17 was never true</span></span>
+    </p>
     <p id="t18" class="mis show_mis"><span class="n"><a href="#t18">18</a></span><span class="t">        <span
             class="nam">prev</span> <span class="op">=</span> <span class="nam">url_for</span><span
             class="op">(</span><span class="str">'api.get_posts'</span><span class="op">,</span> <span
             class="nam">page</span><span class="op">=</span><span class="nam">page</span> <span
             class="op">-</span> <span class="num">1</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
     </p>
-    <p id="t19" class="mis show_mis"><span class="n"><a href="#t19">19</a></span><span class="t">    <span class="nam">next</span> <span
-            class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t20" class="mis show_mis"><span class="n"><a href="#t20">20</a></span><span class="t">    <span class="key">if</span> <span
-            class="nam">pagination</span><span class="op">.</span><span class="nam">has_next</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t19" class="run"><span class="n"><a href="#t19">19</a></span><span class="t">    <span
+            class="nam">next</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t20" class="par run show_par"><span class="n"><a href="#t20">20</a></span><span class="t">    <span
+            class="key">if</span> <span class="nam">pagination</span><span class="op">.</span><span
+            class="nam">has_next</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">20&#x202F;&#x219B;&#x202F;21</span><span class="annotate long">line 20 didn't jump to line 21, because the condition on line 20 was never true</span></span>
+    </p>
     <p id="t21" class="mis show_mis"><span class="n"><a href="#t21">21</a></span><span class="t">        <span
             class="nam">next</span> <span class="op">=</span> <span class="nam">url_for</span><span
             class="op">(</span><span class="str">'api.get_posts'</span><span class="op">,</span> <span
@@ -135,8 +141,8 @@
     </p>
     <p id="t22" class="pln"><span class="n"><a href="#t22">22</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p id="t23" class="mis show_mis"><span class="n"><a href="#t23">23</a></span><span class="t">    <span class="key">return</span> <span
-            class="nam">jsonify</span><span class="op">(</span><span class="op">{</span>&nbsp;</span><span
+    <p id="t23" class="run"><span class="n"><a href="#t23">23</a></span><span class="t">    <span
+            class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">{</span>&nbsp;</span><span
             class="r"></span></p>
     <p id="t24" class="pln"><span class="n"><a href="#t24">24</a></span><span class="t">        <span class="str">'posts'</span><span
             class="op">:</span> <span class="op">[</span><span class="nam">post</span><span class="op">.</span><span
@@ -165,15 +171,16 @@
     <p id="t32" class="run"><span class="n"><a href="#t32">32</a></span><span class="t"><span
             class="key">def</span> <span class="nam">get_post</span><span class="op">(</span><span class="nam">id</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t33" class="mis show_mis"><span class="n"><a href="#t33">33</a></span><span class="t">    <span class="nam">post</span> <span
-            class="op">=</span> <span class="nam">Post</span><span class="op">.</span><span
-            class="nam">query</span><span class="op">.</span><span class="nam">get_or_404</span><span
-            class="op">(</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
+    <p id="t33" class="run"><span class="n"><a href="#t33">33</a></span><span class="t">    <span
+            class="nam">post</span> <span class="op">=</span> <span class="nam">Post</span><span
+            class="op">.</span><span class="nam">query</span><span class="op">.</span><span
+            class="nam">get_or_404</span><span class="op">(</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t34" class="run"><span class="n"><a href="#t34">34</a></span><span class="t">    <span
+            class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span
+            class="nam">post</span><span class="op">.</span><span class="nam">to_json</span><span
+            class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
     </p>
-    <p id="t34" class="mis show_mis"><span class="n"><a href="#t34">34</a></span><span class="t">    <span class="key">return</span> <span
-            class="nam">jsonify</span><span class="op">(</span><span class="nam">post</span><span
-            class="op">.</span><span class="nam">to_json</span><span class="op">(</span><span class="op">)</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p id="t35" class="pln"><span class="n"><a href="#t35">35</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
     <p id="t36" class="pln"><span class="n"><a href="#t36">36</a></span><span class="t">&nbsp;</span><span
@@ -190,26 +197,29 @@
     <p id="t39" class="run"><span class="n"><a href="#t39">39</a></span><span class="t"><span
             class="key">def</span> <span class="nam">new_post</span><span class="op">(</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t40" class="mis show_mis"><span class="n"><a href="#t40">40</a></span><span class="t">    <span class="nam">post</span> <span
-            class="op">=</span> <span class="nam">Post</span><span class="op">.</span><span class="nam">from_json</span><span
-            class="op">(</span><span class="nam">request</span><span class="op">.</span><span
-            class="nam">json</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t41" class="mis show_mis"><span class="n"><a href="#t41">41</a></span><span class="t">    <span class="nam">post</span><span
-            class="op">.</span><span class="nam">author</span> <span class="op">=</span> <span class="nam">g</span><span
-            class="op">.</span><span class="nam">current_user</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t42" class="mis show_mis"><span class="n"><a href="#t42">42</a></span><span class="t">    <span class="nam">db</span><span
-            class="op">.</span><span class="nam">session</span><span class="op">.</span><span
+    <p id="t40" class="run"><span class="n"><a href="#t40">40</a></span><span class="t">    <span
+            class="nam">post</span> <span class="op">=</span> <span class="nam">Post</span><span
+            class="op">.</span><span class="nam">from_json</span><span class="op">(</span><span
+            class="nam">request</span><span class="op">.</span><span class="nam">json</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t41" class="run"><span class="n"><a href="#t41">41</a></span><span class="t">    <span
+            class="nam">post</span><span class="op">.</span><span class="nam">author</span> <span
+            class="op">=</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t42" class="run"><span class="n"><a href="#t42">42</a></span><span class="t">    <span
+            class="nam">db</span><span class="op">.</span><span class="nam">session</span><span class="op">.</span><span
             class="nam">add</span><span class="op">(</span><span class="nam">post</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p id="t43" class="mis show_mis"><span class="n"><a href="#t43">43</a></span><span class="t">    <span class="nam">db</span><span
-            class="op">.</span><span class="nam">session</span><span class="op">.</span><span
+    <p id="t43" class="run"><span class="n"><a href="#t43">43</a></span><span class="t">    <span
+            class="nam">db</span><span class="op">.</span><span class="nam">session</span><span class="op">.</span><span
             class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p id="t44" class="mis show_mis"><span class="n"><a href="#t44">44</a></span><span class="t">    <span class="key">return</span> <span
-            class="nam">jsonify</span><span class="op">(</span><span class="nam">post</span><span
-            class="op">.</span><span class="nam">to_json</span><span class="op">(</span><span class="op">)</span><span
-            class="op">)</span><span class="op">,</span> <span class="num">201</span><span class="op">,</span> <span
-            class="xx">\</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t44" class="run"><span class="n"><a href="#t44">44</a></span><span class="t">    <span
+            class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span
+            class="nam">post</span><span class="op">.</span><span class="nam">to_json</span><span
+            class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">,</span> <span
+            class="num">201</span><span class="op">,</span> <span class="xx">\</span>&nbsp;</span><span
+            class="r"></span></p>
     <p id="t45" class="pln"><span class="n"><a href="#t45">45</a></span><span class="t">           <span
             class="op">{</span><span class="str">'Location'</span><span class="op">:</span> <span
             class="nam">url_for</span><span class="op">(</span><span class="str">'api.get_post'</span><span
@@ -233,16 +243,17 @@
             class="key">def</span> <span class="nam">edit_post</span><span class="op">(</span><span
             class="nam">id</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
     </p>
-    <p id="t51" class="mis show_mis"><span class="n"><a href="#t51">51</a></span><span class="t">    <span class="nam">post</span> <span
-            class="op">=</span> <span class="nam">Post</span><span class="op">.</span><span
-            class="nam">query</span><span class="op">.</span><span class="nam">get_or_404</span><span
-            class="op">(</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
-    </p>
-    <p id="t52" class="mis show_mis"><span class="n"><a href="#t52">52</a></span><span class="t">    <span class="key">if</span> <span
-            class="nam">g</span><span class="op">.</span><span class="nam">current_user</span> <span
-            class="op">!=</span> <span class="nam">post</span><span class="op">.</span><span
-            class="nam">author</span> <span class="key">and</span> <span class="xx">\</span>&nbsp;</span><span
+    <p id="t51" class="run"><span class="n"><a href="#t51">51</a></span><span class="t">    <span
+            class="nam">post</span> <span class="op">=</span> <span class="nam">Post</span><span
+            class="op">.</span><span class="nam">query</span><span class="op">.</span><span
+            class="nam">get_or_404</span><span class="op">(</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
+    <p id="t52" class="par run show_par"><span class="n"><a href="#t52">52</a></span><span class="t">    <span
+            class="key">if</span> <span class="nam">g</span><span class="op">.</span><span
+            class="nam">current_user</span> <span class="op">!=</span> <span class="nam">post</span><span
+            class="op">.</span><span class="nam">author</span> <span class="key">and</span> <span class="xx">\</span>&nbsp;</span><span
+            class="r"><span class="annotate short">52&#x202F;&#x219B;&#x202F;54</span><span class="annotate long">line 52 didn't jump to line 54, because the condition on line 52 was never true</span></span>
+    </p>
     <p id="t53" class="pln"><span class="n"><a href="#t53">53</a></span><span class="t">            <span class="key">not</span> <span
             class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span
             class="op">.</span><span class="nam">can</span><span class="op">(</span><span
@@ -251,24 +262,26 @@
     <p id="t54" class="mis show_mis"><span class="n"><a href="#t54">54</a></span><span class="t">        <span
             class="key">return</span> <span class="nam">forbidden</span><span class="op">(</span><span class="str">'Insufficient permissions'</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t55" class="mis show_mis"><span class="n"><a href="#t55">55</a></span><span class="t">    <span class="nam">post</span><span
-            class="op">.</span><span class="nam">body</span> <span class="op">=</span> <span
-            class="nam">request</span><span class="op">.</span><span class="nam">json</span><span
-            class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'body'</span><span
-            class="op">,</span> <span class="nam">post</span><span class="op">.</span><span class="nam">body</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p id="t56" class="mis show_mis"><span class="n"><a href="#t56">56</a></span><span class="t">    <span class="nam">db</span><span
-            class="op">.</span><span class="nam">session</span><span class="op">.</span><span
+    <p id="t55" class="run"><span class="n"><a href="#t55">55</a></span><span class="t">    <span
+            class="nam">post</span><span class="op">.</span><span class="nam">body</span> <span
+            class="op">=</span> <span class="nam">request</span><span class="op">.</span><span
+            class="nam">json</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span
+            class="str">'body'</span><span class="op">,</span> <span class="nam">post</span><span
+            class="op">.</span><span class="nam">body</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p id="t56" class="run"><span class="n"><a href="#t56">56</a></span><span class="t">    <span
+            class="nam">db</span><span class="op">.</span><span class="nam">session</span><span class="op">.</span><span
             class="nam">add</span><span class="op">(</span><span class="nam">post</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p id="t57" class="mis show_mis"><span class="n"><a href="#t57">57</a></span><span class="t">    <span class="nam">db</span><span
-            class="op">.</span><span class="nam">session</span><span class="op">.</span><span
+    <p id="t57" class="run"><span class="n"><a href="#t57">57</a></span><span class="t">    <span
+            class="nam">db</span><span class="op">.</span><span class="nam">session</span><span class="op">.</span><span
             class="nam">commit</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p id="t58" class="mis show_mis"><span class="n"><a href="#t58">58</a></span><span class="t">    <span class="key">return</span> <span
-            class="nam">jsonify</span><span class="op">(</span><span class="nam">post</span><span
-            class="op">.</span><span class="nam">to_json</span><span class="op">(</span><span class="op">)</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t58" class="run"><span class="n"><a href="#t58">58</a></span><span class="t">    <span
+            class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span
+            class="nam">post</span><span class="op">.</span><span class="nam">to_json</span><span
+            class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
+    </p>
 </div>
 <div id="footer">
     <div class="content">
@@ -276,7 +289,7 @@
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav"
                                                                                href="https://coverage.readthedocs.io">coverage.py
             v5.5</a>,
-            created at 2021-07-24 10:48 +0800
+            created at 2021-07-24 16:26 +0800
         </p>
     </div>
 </div>

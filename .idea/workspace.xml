@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask 客户端测试与文件细节更改 配置">
-      <change afterPath="$PROJECT_DIR$/tests/test_api.py" afterDir="false" />
+    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask web测试 配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_authentication_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_authentication_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_comments_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_comments_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_decorators_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_decorators_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_errors_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_errors_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_posts_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_posts_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_users_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_users_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_main_errors_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_main_errors_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_models_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_models_py.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/coverage_html.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/coverage_html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/jquery.hotkeys.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/jquery.hotkeys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/jquery.isonscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/jquery.isonscreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/status.json" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/status.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/coverage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +67,7 @@
     <setting file="file://$PROJECT_DIR$/app/templates/followers.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/templates/user.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/main/forms.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/test_api.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/test_api.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/tests/__init__.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/auth/views.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flasky.py" root0="FORCE_HIGHLIGHTING" />
@@ -294,7 +307,7 @@
       <workItem from="1626344666383" duration="8401000" />
       <workItem from="1626440928613" duration="700000" />
       <workItem from="1627089968213" duration="4045000" />
-      <workItem from="1627094741269" duration="6860000" />
+      <workItem from="1627094741269" duration="9571000" />
     </task>
     <task id="LOCAL-00001" summary="flask moment 配置">
       <created>1615299753202</created>
@@ -485,7 +498,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627110594000</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="flask 客户端测试与文件细节更改 配置">
+      <created>1627114906553</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1627114906553</updated>
+    </task>
+    <task id="LOCAL-00029" summary="flask web测试 配置">
+      <created>1627114929006</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1627114929006</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="flask moment 配置" />
     <MESSAGE value="flask 数据库 配置" />
     <MESSAGE value="flask 电子邮件 配置" />
     <MESSAGE value="flask unittest 配置" />
@@ -530,11 +556,12 @@
     <MESSAGE value="flask json序列化与资源端点实现 配置" />
     <MESSAGE value="flask HTTPie测试web服务 配置" />
     <MESSAGE value="flask 客户端测试与文件细节更改 配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="flask 客户端测试与文件细节更改 配置" />
+    <MESSAGE value="flask web测试 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask web测试 配置" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flasky$Flask__flasky_py_.coverage" NAME="Flask (flasky.py) Coverage Results" MODIFIED="1627109304170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flasky$Flask__flasky_py_.coverage" NAME="Flask (flasky.py) Coverage Results" MODIFIED="1627115168698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$Flask.coverage" NAME="Flask (hello.py) Coverage Results" MODIFIED="1617679307421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$hello.coverage" NAME="hello Coverage Results" MODIFIED="1617277526115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasky$views.coverage" NAME="views Coverage Results" MODIFIED="1624012087042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/main" />
