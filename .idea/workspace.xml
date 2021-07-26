@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask web测试 配置">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_selenium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_authentication_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_authentication_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_comments_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_comments_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_decorators_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_decorators_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_errors_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_errors_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_posts_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_posts_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_api_users_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_api_users_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_main_errors_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_main_errors_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/app_models_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/app_models_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/coverage_html.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/coverage_html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/jquery.hotkeys.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/jquery.hotkeys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/jquery.isonscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/jquery.isonscreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/status.json" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/status.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/coverage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/coverage/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +125,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="DBNavigator.Project.GeneralSettings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../flask/flasky/app/auth/views.py" />
   </component>
   <component name="RecentsManager">
@@ -307,7 +299,8 @@
       <workItem from="1626344666383" duration="8401000" />
       <workItem from="1626440928613" duration="700000" />
       <workItem from="1627089968213" duration="4045000" />
-      <workItem from="1627094741269" duration="9571000" />
+      <workItem from="1627094741269" duration="17490000" />
+      <workItem from="1627278986849" duration="2976000" />
     </task>
     <task id="LOCAL-00001" summary="flask moment 配置">
       <created>1615299753202</created>
@@ -512,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627114929006</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="flask web测试 配置">
+      <created>1627189262870</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1627189262870</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
