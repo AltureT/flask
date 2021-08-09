@@ -11,10 +11,10 @@ class SeleniumTestCase(unittest.TestCase):
     client = None
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls):
         # 启动Chrome
         options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
+        options.add_argument('headless')
 
         try:
             cls.client = webdriver.Chrome(chrome_options=options)
@@ -31,7 +31,7 @@ class SeleniumTestCase(unittest.TestCase):
             # 禁止日志，保持输出简洁
             import logging
             logger = logging.getLogger('werkzeug')
-            logger.setLevel('ERROR')
+            logger.setLevel("ERROR")
 
             # 创建数据库，并使用一些虚拟数据填充
             db.create_all()
@@ -40,7 +40,7 @@ class SeleniumTestCase(unittest.TestCase):
             fake.posts(10)
 
             # 添加管理员
-            admin_role = Role.query.filter_by(permissions=0xff).first()
+            admin_role = Role.query.filter_by(name='Administrator').first()
             admin = User(email='john@example.com',
                          username='john', password='cat',
                          role=admin_role, confirmed=True)
@@ -48,16 +48,12 @@ class SeleniumTestCase(unittest.TestCase):
             db.session.commit()
 
             # 在一个线程中启动Flask服务器
-            cls.server_thread = threading.Thread(
-                target=cls.app.run, kwargs={'debug': False,
-                                            'use_reloader': False,
-                                            'use_debugger': False}
-
-            )
+            cls.server_thread = threading.Thread(target=cls.app.run,
+                                                 kwargs={'debug': False})
             cls.server_thread.start()
 
     @classmethod
-    def tearDownClass(cls) -> None:
+    def tearDownClass(cls):
         if cls.client:
             # 关闭Flask服务器和浏览器
             cls.client.get('http://localhost:5000/shutdown')
@@ -71,11 +67,11 @@ class SeleniumTestCase(unittest.TestCase):
             # 删除应用上下文
             cls.app_context.pop()
 
-    def setUp(self) -> None:
+    def setUp(self):
         if not self.client:
             self.skipTest('Web browser not available')
 
-    def tearDown(self) -> None:
+    def tearDown(self):
         pass
 
     def test_admin_home_page(self):

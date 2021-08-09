@@ -4,11 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask requirements配置 配置">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask heroku 配置">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boot.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements/docker.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/comments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/posts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/_macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_macros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/change_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/change_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/email/change_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/email/change_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/email/confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/email/confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/email/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/email/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/auth/unconfirmed.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/unconfirmed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/edit_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/edit_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/followers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/followers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/moderate.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/moderate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flasky.py" beforeDir="false" afterPath="$PROJECT_DIR$/flasky.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_selenium.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +147,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/requirements" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -124,6 +157,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../flask/flasky/app/auth/views.py" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/../study/flasky" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -303,7 +337,8 @@
       <workItem from="1628039294928" duration="29000" />
       <workItem from="1628039343251" duration="440000" />
       <workItem from="1628039795468" duration="7133000" />
-      <workItem from="1628473117702" duration="752000" />
+      <workItem from="1628473117702" duration="3889000" />
+      <workItem from="1628478948819" duration="2966000" />
     </task>
     <task id="LOCAL-00001" summary="flask moment 配置">
       <created>1615299753202</created>
@@ -550,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628048111942</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="flask heroku 配置">
+      <created>1628473906251</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1628473906251</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="flask 账户管理 配置" />
     <MESSAGE value="flask 用户资料页面 配置" />
     <MESSAGE value="flask 用户资料编辑页面 配置" />
     <MESSAGE value="flask 管理员资料编辑页面 配置" />
@@ -595,7 +636,8 @@
     <MESSAGE value="flask 源码分析寻找性能问题 配置" />
     <MESSAGE value="flask deploy部署配置 配置" />
     <MESSAGE value="flask requirements配置 配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="flask requirements配置 配置" />
+    <MESSAGE value="flask heroku 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask heroku 配置" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

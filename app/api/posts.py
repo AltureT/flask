@@ -19,7 +19,6 @@ def get_posts():
     next = None
     if pagination.has_next:
         next = url_for('api.get_posts', page=page + 1)
-
     return jsonify({
         'posts': [post.to_json() for post in posts],
         'prev': prev,

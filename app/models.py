@@ -6,7 +6,7 @@ from markdown import markdown
 import bleach
 from flask import current_app, request, url_for
 from flask_login import UserMixin, AnonymousUserMixin
-from .exceptions import ValidationError
+from app.exceptions import ValidationError
 from . import db, login_manager
 
 
@@ -209,10 +209,6 @@ class User(UserMixin, db.Model):
 
     def gravatar(self, size=100, default='identicon', rating='g'):
         url = 'https://secure.gravatar.com/avatar'
-        # if request.is_secure:
-        #     url = 'https://secure.gravatar.com/avatar'
-        # else:
-        #     url = 'http://www.gravatar.com/avatar'
         hash = self.avatar_hash or self.gravatar_hash()
         return f'{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url, hash=hash, size=size, default=default, rating=rating)
@@ -281,7 +277,6 @@ class AnonymousUser(AnonymousUserMixin):
 
     def is_administrator(self):
         return False
-
 
 login_manager.anonymous_user = AnonymousUser
 

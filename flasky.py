@@ -3,7 +3,6 @@ import os
 COV = None
 if os.environ.get('FLASK_COVERAGE'):
     import coverage
-
     COV = coverage.coverage(branch=True, include='app/*')
     COV.start()
 
@@ -64,7 +63,7 @@ def profile(length, profile_dir):
     from werkzeug.contrib.profiler import ProfilerMiddleware
     app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[length],
                                       profile_dir=profile_dir)
-    app.run(debug=False)
+    app.run()
 
 
 @app.cli.command()

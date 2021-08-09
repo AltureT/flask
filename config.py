@@ -8,8 +8,8 @@ class Config:
     MAIL_PORT = int(os.environ.get('MAIL_PORT', '587'))
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', 'true').lower() in \
                    ['true', 'on', '1']
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_USERNAME = os.environ.get('alturetest@gmail.com')
+    MAIL_PASSWORD = os.environ.get('lYy|t&:=7W[7c=QC,=L&')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin alturetest@gmail.com'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
@@ -37,7 +37,6 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
                               'sqlite://'
     WTF_CSRF_ENABLED = False
-    PRESERVE_CONTEXT_ON_EXCEPTION = False
 
 
 class ProductionConfig(Config):
@@ -48,6 +47,7 @@ class ProductionConfig(Config):
     def init_app(cls, app):
         Config.init_app(app)
 
+        # email errors to the administrators
         import logging
         from logging.handlers import SMTPHandler
         credentials = None
@@ -74,11 +74,24 @@ class HerokuConfig(ProductionConfig):
     def init_app(cls, app):
         ProductionConfig.init_app(app)
 
-        # 处理反向代理服务器设定的首部
+        # handle reverse proxy server headers
         from werkzeug.contrib.fixers import ProxyFix
         app.wsgi_app = ProxyFix(app.wsgi_app)
 
-        # 输出到stderr
+        # log to stderr
+        import logging
+        from logging import StreamHandler
+        file_handler = StreamHandler()
+        file_handler.setLevel(logging.INFO)
+        app.logger.addHandler(file_handler)
+
+
+class DockerConfig(ProductionConfig):
+    @classmethod
+    def init_app(cls, app):
+        ProductionConfig.init_app(app)
+
+        # log to stderr
         import logging
         from logging import StreamHandler
         file_handler = StreamHandler()
@@ -91,6 +104,8 @@ config = {
     'testing': TestingConfig,
     'production': ProductionConfig,
     'heroku': HerokuConfig,
+    'docker': DockerConfig,
 
     'default': DevelopmentConfig
+    # 'default': HerokuConfig
 }

@@ -1,6 +1,5 @@
 from flask import jsonify
 from app.exceptions import ValidationError
-
 from . import api
 
 
