@@ -4,20 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask heroku 配置">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boot.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements/docker.txt" afterDir="false" />
+    <list default="true" id="db6245ee-2a52-4988-b5a5-949945fafe85" name="Default Changelist" comment="flask docker 配置">
+      <change afterPath="$PROJECT_DIR$/migrations/versions/63e75d2a198b_.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/decorators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/posts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/decorators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/_macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_macros.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/_posts.html" afterDir="false" />
@@ -39,9 +41,13 @@
       <change beforePath="$PROJECT_DIR$/app/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasky.py" beforeDir="false" afterPath="$PROJECT_DIR$/flasky.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements/common.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/common.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements/docker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/docker.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_selenium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_user_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +344,9 @@
       <workItem from="1628039343251" duration="440000" />
       <workItem from="1628039795468" duration="7133000" />
       <workItem from="1628473117702" duration="3889000" />
-      <workItem from="1628478948819" duration="2966000" />
+      <workItem from="1628478948819" duration="5877000" />
+      <workItem from="1628559931185" duration="92000" />
+      <workItem from="1628560352536" duration="1371000" />
     </task>
     <task id="LOCAL-00001" summary="flask moment 配置">
       <created>1615299753202</created>
@@ -592,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628473906251</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="flask docker 配置">
+      <created>1628485044035</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1628485044035</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="flask 用户资料页面 配置" />
     <MESSAGE value="flask 用户资料编辑页面 配置" />
     <MESSAGE value="flask 管理员资料编辑页面 配置" />
     <MESSAGE value="flask 用户头像 配置" />
@@ -637,7 +651,8 @@
     <MESSAGE value="flask deploy部署配置 配置" />
     <MESSAGE value="flask requirements配置 配置" />
     <MESSAGE value="flask heroku 配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="flask heroku 配置" />
+    <MESSAGE value="flask docker 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask docker 配置" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

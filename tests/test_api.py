@@ -141,7 +141,7 @@ class APITestCase(unittest.TestCase):
         self.assertEqual('http://localhost' + json_response['url'], url)
         self.assertEqual(json_response['body'], 'body of the *blog* post')
         self.assertEqual(json_response['body_html'],
-                         '<p>body of the <em>blog</em> post</p>')
+                        '<p>body of the <em>blog</em> post</p>')
         json_post = json_response
 
         # get the post from the user
@@ -226,7 +226,7 @@ class APITestCase(unittest.TestCase):
         url = response.headers.get('Location')
         self.assertIsNotNone(url)
         self.assertEqual(json_response['body'],
-                         'Good [post](http://example.com)!')
+                        'Good [post](http://example.com)!')
         self.assertEqual(
             re.sub('<.*?>', '', json_response['body_html']), 'Good post!')
 
@@ -238,7 +238,7 @@ class APITestCase(unittest.TestCase):
         json_response = json.loads(response.get_data(as_text=True))
         self.assertEqual('http://localhost' + json_response['url'], url)
         self.assertEqual(json_response['body'],
-                         'Good [post](http://example.com)!')
+                        'Good [post](http://example.com)!')
 
         # add another comment
         comment = Comment(body='Thank you!', author=u1, post=post)

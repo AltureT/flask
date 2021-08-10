@@ -210,7 +210,7 @@ class User(UserMixin, db.Model):
     def gravatar(self, size=100, default='identicon', rating='g'):
         url = 'https://secure.gravatar.com/avatar'
         hash = self.avatar_hash or self.gravatar_hash()
-        return f'{url}/{hash}?s={size}&d={default}&r={rating}'.format(
+        return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url, hash=hash, size=size, default=default, rating=rating)
 
     def follow(self, user):
@@ -237,7 +237,7 @@ class User(UserMixin, db.Model):
 
     @property
     def followed_posts(self):
-        return Post.query.join(Follow, Follow.followed_id == Post.author_id) \
+        return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
             .filter(Follow.follower_id == self.id)
 
     def to_json(self):
@@ -339,8 +339,8 @@ class Comment(db.Model):
 
     @staticmethod
     def on_changed_body(target, value, oldvalue, initiator):
-        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code',
-                        'em', 'i', 'strong']
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em', 'i',
+                        'strong']
         target.body_html = bleach.linkify(bleach.clean(
             markdown(value, output_format='html'),
             tags=allowed_tags, strip=True))

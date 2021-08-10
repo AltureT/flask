@@ -15,7 +15,6 @@ class SeleniumTestCase(unittest.TestCase):
         # 启动Chrome
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
-
         try:
             cls.client = webdriver.Chrome(chrome_options=options)
         except:
@@ -51,6 +50,9 @@ class SeleniumTestCase(unittest.TestCase):
             cls.server_thread = threading.Thread(target=cls.app.run,
                                                  kwargs={'debug': False})
             cls.server_thread.start()
+
+            # give the server a second to ensure it is up
+            time.sleep(1)
 
     @classmethod
     def tearDownClass(cls):
